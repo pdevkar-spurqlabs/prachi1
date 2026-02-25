@@ -86,7 +86,7 @@ export default function HiringProcess() {
         />
       </div>
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 -mt-16">
         <div className="max-w-7xl mx-auto" ref={sectionRef}>
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-orange-400 font-semibold text-sm uppercase tracking-wider mb-3">

@@ -252,24 +252,24 @@ export default function OpenPositions({ onApply }: OpenPositionsProps) {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div
-            className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
-              visible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
-              Current Openings
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Find Your Next Role
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our open positions across various QA specializations.
-              Can&apos;t find the right fit? Submit your resume for future
-              opportunities.
-            </p>
-          </div>
+  className={`text-center -mt-4 mb-12 lg:mb-16 transition-all duration-700 ${
+    visible
+      ? 'opacity-100 translate-y-0'
+      : 'opacity-0 translate-y-8'
+  }`}
+>
+  <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+    Current Openings
+  </p>
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+    Find Your Next Role
+  </h2>
+  <p className="text-gray-600 max-w-2xl mx-auto">
+    Explore our open positions across various QA specializations.
+    Can&apos;t find the right fit? Submit your resume for future
+    opportunities.
+  </p>
+</div>
 
           {/* Department Filters */}
           <div

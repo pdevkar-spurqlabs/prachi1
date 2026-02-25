@@ -250,8 +250,8 @@ export default function StoriesPage() {
       <section className="py-8 lg:py-12 bg-gray-50 sticky top-16 lg:top-20 z-40 border-b border-gray-200">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-between flex-wrap gap-4">
-              <p className="text-gray-600 font-medium">Filter by industry:</p>
+            <div className="flex justify-center flex-wrap gap-4">
+             
               <div className="flex flex-wrap gap-2">
                 {filters.map((filter) => (
                   <button
@@ -410,10 +410,14 @@ export default function StoriesPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">What Clients Say</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Trusted by Industry Leaders</h2>
-            </div>
+     <div className="text-center mb-12">
+  <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider -mt-4 mb-3">
+    What Clients Say
+  </p>
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+    Trusted by Industry Leaders
+  </h2>
+</div>
             
             <div className="grid md:grid-cols-3 gap-6">
               {caseStudies.slice(0, 3).map((study) => (
@@ -449,10 +453,16 @@ export default function StoriesPage() {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">Our Expertise</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Industries We Transform</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Deep domain expertise across the industries that matter most.</p>
-            </div>
+  <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider -mt-6 mb-3">
+    Our Expertise
+  </p>
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+    Industries We Transform
+  </h2>
+  <p className="text-gray-600 max-w-2xl mx-auto">
+    Deep domain expertise across the industries that matter most.
+  </p>
+</div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[

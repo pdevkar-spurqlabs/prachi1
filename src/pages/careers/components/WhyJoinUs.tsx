@@ -91,7 +91,7 @@ export default function WhyJoinUs() {
 
   return (
     <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 -mt-8">
         <div className="max-w-7xl mx-auto" ref={sectionRef}>
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
