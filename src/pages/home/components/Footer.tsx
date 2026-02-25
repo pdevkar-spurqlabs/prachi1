@@ -6,6 +6,7 @@ export default function Footer() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8 mb-10 lg:mb-12">
+            {/* Logo & About */}
             <div>
               <Link to="/" className="cursor-pointer">
                 <img 
@@ -18,7 +19,8 @@ export default function Footer() {
                 Exceptional QA teams that help product companies ship faster with confidence.
               </p>
             </div>
-            
+
+            {/* Services */}
             <div>
               <h4 className="font-bold text-base lg:text-lg mb-3 lg:mb-4">Services</h4>
               <ul className="space-y-2">
@@ -28,7 +30,8 @@ export default function Footer() {
                 <li><Link to="/#services" className="text-sm text-gray-600 hover:text-orange-500 transition-colors cursor-pointer">DevOps & CI/CD</Link></li>
               </ul>
             </div>
-            
+
+            {/* Company */}
             <div>
               <h4 className="font-bold text-base lg:text-lg mb-3 lg:mb-4">Company</h4>
               <ul className="space-y-2">
@@ -38,7 +41,8 @@ export default function Footer() {
                 <li><Link to="/#why-choose-us" className="text-sm text-gray-600 hover:text-orange-500 transition-colors cursor-pointer">Why Choose Us</Link></li>
               </ul>
             </div>
-            
+
+            {/* US Office */}
             <div>
               <h4 className="font-bold text-base lg:text-lg mb-3 lg:mb-4">US Office</h4>
               <ul className="space-y-2 text-sm text-gray-600">
@@ -48,6 +52,7 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* UK & India Offices */}
             <div>
               <h4 className="font-bold text-base lg:text-lg mb-3 lg:mb-4">UK Office</h4>
               <ul className="space-y-2 text-sm text-gray-600 mb-6">
@@ -65,43 +70,45 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Quick Contact & Social */}
           <div className="mb-8">
             <h4 className="font-bold text-base lg:text-lg mb-3">Quick Contact</h4>
             <div className="flex gap-3">
-              <a href="https://calendly.com/spurqlabs/20-minute-qa-strategy-call" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-orange-500 transition-colors cursor-pointer">Book a Call</a>
+              <a href="https://calendly.com/spurqlabs-book-a-demo" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-orange-500 transition-colors cursor-pointer">Book a Call</a>
               <span className="text-gray-400">|</span>
               <Link to="/#assessment" className="text-sm text-gray-600 hover:text-orange-500 transition-colors cursor-pointer">Get Assessment</Link>
             </div>
             <div className="flex gap-3 mt-4">
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://www.facebook.com/spurqlabs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-facebook-fill text-lg lg:text-xl"></i>
               </a>
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://www.instagram.com/spurqlabs/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-instagram-fill text-lg lg:text-xl"></i>
               </a>
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://x.com/spurqlabs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-twitter-x-fill text-lg lg:text-xl"></i>
               </a>
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://www.linkedin.com/company/spurqlabs/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-linkedin-fill text-lg lg:text-xl"></i>
               </a>
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://www.youtube.com/@spurqlabs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-youtube-fill text-lg lg:text-xl"></i>
               </a>
-              <a href="#" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-colors cursor-pointer">
+              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-gray-200 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i className="ri-github-fill text-lg lg:text-xl"></i>
               </a>
             </div>
           </div>
-          
+
+          {/* Footer Bottom */}
           <div className="border-t border-gray-300 pt-6 lg:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-xs lg:text-sm">
-              © 2025 SpurQLabs. All rights reserved.
+              © 2026 SpurQLabs. All rights reserved.
             </p>
             <div className="flex items-center gap-4 lg:gap-6 flex-wrap justify-center">
               <Link to="/privacy-policy" className="text-gray-600 hover:text-orange-500 text-xs lg:text-sm transition-colors cursor-pointer">Privacy Policy</Link>
               <Link to="/terms-of-service" className="text-gray-600 hover:text-orange-500 text-xs lg:text-sm transition-colors cursor-pointer">Terms of Service</Link>
-              <a href="https://readdy.ai/?ref=logo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 text-xs lg:text-sm transition-colors cursor-pointer">Powered by Readdy</a>
+              {/* <a href="https://readdy.ai/?ref=logo" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 text-xs lg:text-sm transition-colors cursor-pointer">Powered by Readdy</a> */}
             </div>
           </div>
         </div>
