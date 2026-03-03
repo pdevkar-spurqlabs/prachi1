@@ -301,41 +301,65 @@ export default function APISecurityTestingPage() {
           </div>
         )}
       </nav>
+{/* Hero Section */}
+<section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700 overflow-hidden">
+  <div className="absolute inset-0">
+    <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse" />
+    <div
+      className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"
+      style={{ animationDelay: '1s' }}
+    />
+  </div>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+  <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+    <div className="max-w-5xl mx-auto">
+
+      {/* Top Row */}
+      <div className="flex items-center gap-4 mb-6">
+        <Link
+          to="/services"
+          className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium cursor-pointer transition-colors"
+        >
+          <i className="ri-arrow-left-line"></i>
+          Back to Services
+        </Link>
+
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
+          <i className="ri-shield-check-line"></i>
+          Security Testing
         </div>
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <Link to="/services" className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium mb-6 cursor-pointer transition-colors">
-              <i className="ri-arrow-left-line"></i>
-              Back to Services
-            </Link>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
-              <i className="ri-shield-check-line"></i>
-              Security Testing
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
-              API Security Testing
-            </h1>
-            <p className="text-lg lg:text-xl text-white/90 mb-10 max-w-3xl leading-relaxed">
-              Comprehensive security testing for REST, GraphQL, SOAP, and microservices APIs. Protect your API endpoints from authentication bypass, data exposure, and business logic attacks.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://calendly.com/spurqlabs/20-minute-qa-strategy-call" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-orange-600 hover:bg-gray-50 font-semibold rounded-xl transition-all duration-300 shadow-lg cursor-pointer whitespace-nowrap inline-flex items-center gap-2">
-                Secure Your APIs
-                <i className="ri-arrow-right-line"></i>
-              </a>
-              <a href="#methodology" className="px-8 py-4 border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-xl transition-all duration-300 cursor-pointer whitespace-nowrap">
-                See Our Methodology
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
+        API Security Testing
+      </h1>
+
+      <p className="text-lg lg:text-xl text-white/90 mb-10 max-w-3xl leading-relaxed">
+        Comprehensive security testing for REST, GraphQL, SOAP, and microservices APIs. Protect your API endpoints from authentication bypass, data exposure, and business logic attacks.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <a
+          href="https://calendly.com/spurqlabs/20-minute-qa-strategy-call"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 bg-white text-orange-600 hover:bg-gray-50 font-semibold rounded-xl transition-all duration-300 shadow-lg cursor-pointer whitespace-nowrap inline-flex items-center gap-2"
+        >
+          Secure Your APIs
+          <i className="ri-arrow-right-line"></i>
+        </a>
+
+        <a
+          href="#methodology"
+          className="px-8 py-4 border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-xl transition-all duration-300 cursor-pointer whitespace-nowrap"
+        >
+          See Our Methodology
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* OWASP API Top 10 */}
       <section className="py-16 lg:py-24 bg-gray-50">

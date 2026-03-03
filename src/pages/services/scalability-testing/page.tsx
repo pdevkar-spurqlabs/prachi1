@@ -220,7 +220,7 @@ export default function ScalabilityTestingPage() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Build for Growth from Day One</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">Scalability testing ensures your application can grow with your business without performance degradation or costly re-architecture.</p>
             </div>
-            
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300">
@@ -245,7 +245,7 @@ export default function ScalabilityTestingPage() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">When You Need Scalability Testing</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">Critical scenarios where scalability testing ensures your application can handle growth efficiently.</p>
             </div>
-            
+
             <div className="grid sm:grid-cols-2 gap-6">
               {scenarios.map((scenario, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
@@ -281,7 +281,7 @@ export default function ScalabilityTestingPage() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Industry-Leading Scalability Testing Tools</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">We leverage powerful tools to validate your application's scalability across all dimensions.</p>
             </div>
-            
+
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {tools.map((tool, index) => (
                 <div key={index} className="group bg-white rounded-xl p-6 border border-gray-100 hover:border-orange-200 hover:shadow-lg transition-all duration-300 cursor-pointer">
@@ -295,55 +295,89 @@ export default function ScalabilityTestingPage() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section id="process" className="py-16 lg:py-20 bg-gray-50">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
+            {/* Heading */}
             <div className="text-center mb-12 lg:mb-16">
-              <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">Our Methodology</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How We Execute Scalability Testing</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">A comprehensive approach that validates your application's ability to scale efficiently in all directions.</p>
+              <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+                Our Process
+              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                How We Deliver Web Automation
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                A proven methodology ensuring scalable and maintainable
+                automation.
+              </p>
             </div>
-            
-            {/* Timeline Layout */}
+
             <div ref={processRef} className="relative">
-              {/* Vertical Line */}
-              <div className={`absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-orange-400 to-orange-600 transform lg:-translate-x-1/2 ${processVisible ? 'process-line animate' : 'process-line'}`}></div>
-              
-              <div className="space-y-12">
+              {/* Animated Line */}
+              <div
+                className={`hidden lg:block absolute left-1/2 top-0 bottom-0 w-[4px]
+          bg-gradient-to-b from-orange-400 via-rose-500 to-purple-600
+          -translate-x-1/2 rounded-full
+          ${processVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"}
+          transition-all duration-700 origin-top`}
+              />
+
+              <div
+                className={`lg:hidden absolute left-6 top-0 bottom-0 w-[4px]
+          bg-gradient-to-b from-orange-400 via-rose-500 to-purple-600
+          rounded-full
+          ${processVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"}
+          transition-all duration-700 origin-top`}
+              />
+
+              <div className="space-y-16">
                 {process.map((item, index) => (
-                  <div key={index} className={`relative flex items-start gap-6 lg:gap-12 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                    {/* Timeline Node */}
-                    <div 
-                      className={`absolute left-8 lg:left-1/2 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-orange-500 to-orange-600 rounded-full transform -translate-x-1/2 shadow-lg shadow-orange-500/30 z-10 ${
-                        processVisible ? 'process-node animate' : 'process-node'
-                      }`}
-                      style={{ animationDelay: `${index * 200}ms` }}
+                  <div
+                    key={index}
+                    className={`relative flex flex-col lg:flex-row items-start ${
+                      index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+                    }`}
+                  >
+                    {/* Node */}
+                    <div
+                      className={`absolute left-6 lg:left-1/2 w-14 h-14
+                bg-gradient-to-br from-orange-500 to-orange-600
+                text-white font-bold rounded-full
+                flex items-center justify-center
+                -translate-x-1/2 shadow-lg z-10
+                ${processVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}
+                transition-all duration-500`}
+                      style={{ transitionDelay: `${index * 150}ms` }}
                     >
-                      <span className="text-white font-bold text-lg">{item.step}</span>
+                      {item.step}
                     </div>
-                    
-                    {/* Content */}
-                    <div className={`ml-20 lg:ml-0 lg:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'lg:pr-8 lg:text-right' : 'lg:pl-8 lg:text-left'}`}>
-                      <div 
-                        className={`bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 ${index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'} ${
-                          processVisible ? (index % 2 === 0 ? 'process-item animate-right' : 'process-item animate-left') : 'process-item'
-                        }`}
-                        style={{ animationDelay: `${index * 200 + 100}ms` }}
+
+                    {/* Card */}
+                    <div className="ml-20 lg:ml-0 lg:w-1/2 px-4">
+                      <div
+                        className={`bg-white rounded-2xl p-6 border border-gray-100
+                  shadow-sm hover:shadow-xl transition-all duration-500
+                  ${processVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+                        style={{ transitionDelay: `${index * 150 + 100}ms` }}
                       >
-                        <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                          <div className="w-10 h-10 flex items-center justify-center bg-orange-50 rounded-lg shrink-0">
-                            <i className={`${item.icon} text-lg text-orange-500`}></i>
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 flex items-center justify-center bg-orange-50 rounded-lg">
+                            <i
+                              className={`${item.icon} text-lg text-orange-500`}
+                            />
                           </div>
-                          <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+                          <h3 className="text-lg font-bold text-gray-900">
+                            {item.title}
+                          </h3>
                         </div>
-                        <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                        <p className="text-sm text-gray-600">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
-                    
-                    {/* Spacer for alternating layout */}
-                    <div className="hidden lg:block lg:w-[calc(50%-3rem)]"></div>
+
+                    <div className="hidden lg:block lg:w-1/2" />
                   </div>
                 ))}
               </div>
@@ -351,6 +385,7 @@ export default function ScalabilityTestingPage() {
           </div>
         </div>
       </section>
+
 
       {/* FAQ Section */}
       <section className="py-16 lg:py-24 bg-white">
@@ -360,7 +395,7 @@ export default function ScalabilityTestingPage() {
               <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">FAQ</p>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             </div>
-            
+
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <details key={index} className="group bg-gray-50 rounded-xl p-6 hover:bg-orange-50 transition-all duration-300">
